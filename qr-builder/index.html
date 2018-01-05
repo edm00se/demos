@@ -5,32 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QR Code Builder</title>
-    <script src="jquery.js"></script>
-    <script src="qrcode.js"></script>
-    <script src="jquery.qrcode.js"></script>
+    <style>
+        .buildMyInfo {
+            width: 32rem;
+            height: auto;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
 
     <h1>QR Builder (canvas)</h1>
+    <p>
+        <input class="buildMyInfo" type="text" placeholder="enter your information to convert">
+    </p>
     <div id="qrcodeCanvas"></div>
     
-<script>
-    // example VCARD
-    var myString = 
-        ['BEGIN:VCARD',
-        'N:Simpson;Homer',
-        'ORG:Springfield Nuclear Power Plant',
-        'TITLE:Safety Engineer',
-        'TEL;WORK;VOICE:(123)456-7890',
-        'ADR;WORK:;;100 Industrial Way;Springfield;??;12345',
-        'EMAIL;WORK:homer.j.simpson@springfieldpower.com',
-        'END:VCARD'
-    ].join('\n');
-
-    jQuery('#qrcodeCanvas').qrcode({
-        render: "canvas",
-        text: myString
-    });
-</script>
+    <script src="jquery.js"></script>
+    <script src="qrcode.js"></script>
+    <script src="jquery.qrcode.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
