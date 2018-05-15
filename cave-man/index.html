@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cave Man</title>
+</head>
+<body>
+    <h1>Cave Man</h1>
+    <p>something so easy, a cave man could do it...</p>
+    <hr>
+    <p>Try changing your network status (or spoofing it in your developer tools for your web browser).</p>
+
+    <script type="text/javascript">
+        window.addEventListener("offline", function(e) {
+            alert("you just went offline");
+        }, false);
+
+        window.addEventListener("online", function(e) {
+            alert("you just came back online");
+        }, false);
+    </script>
+</body>
+</html>
