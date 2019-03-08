@@ -1,4 +1,4 @@
-# Cave Man (Offline Detection)
+# Offline Detection Demo
 
 Detecting network online/offline events, with pure vanilla JavaScript.
 
@@ -6,7 +6,7 @@ Detecting network online/offline events, with pure vanilla JavaScript.
 
 Open the `index.html` file in your web browser, it likely won't work with the `file://` protocol (dragging and dropping into your browser). You should use a development server such as [`serve`](http://npm.im/serve) to serve the files locally, otherwise just browse to it in this repo's GitHub Pages instance.
 
-### [demos/cave-man](https://edm00se.codes/demos/cave-man/)
+### [demos/cave-man](https://edm00se.codes/demos/offline-detection/)
 
 ## Credits
 

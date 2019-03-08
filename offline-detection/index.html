@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Offline Detection Demo</title>
+    <style lang="css">
+.lead {
+  font-size: 1.2em;
+}
+
+.status {
+  display: inline-block;
+  border: 1px solid black;
+  min-width:1em;
+}
+
+.offline {
+  background-color: red;
+  color: white;
+}
+
+.online {
+  background-color: green;
+  color: white;
+}
+    </style>
+</head>
+<body>
+    <h1>Offline Detection</h1>
+    <p class="lead">
+      Try changing your network status (or spoofing it in your developer tools for your web browser).
+    </p>
+    <p>
+      Current status: 
+      <span class="status"></span>
+    </p>
+
+    <script type="text/javascript">
+const statusEl = document.querySelector('.status');
+
+function toggleStatus(up){
+  if(up){
+    statusEl.classList.remove('offline');
+    statusEl.classList.add('online');
+    statusEl.innerText = ' ONLINE ';
+  } else {
+    statusEl.classList.remove('online');
+    statusEl.classList.add('offline');
+    statusEl.innerText = ' OFFLINE ';
+  }
+}
+
+toggleStatus(true);
+
+window.addEventListener(
+  "offline",
+  function(e) {
+    toggleStatus(false);
+  },
+  false
+);
+
+window.addEventListener(
+  "online",
+  function(e) {
+    toggleStatus(true);
+  },
+  false
+);
+    </script>
+</body>
+</html>
