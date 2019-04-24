@@ -1,5 +1,8 @@
 (function(){
 
+    var targetDiv = document.getElementById('qrcodeCanvas');
+    var qrcode = new QRCode(targetDiv);
+
     // example VCARD
     var defaultString = 
         ['BEGIN:VCARD',
@@ -12,22 +15,14 @@
         'END:VCARD'
     ].join('\n'); // joins into string with a newline character as the separator
 
-    // example WIFI access settings
-    // var defaultString = 'WIFI:S:MyMagicalNetworkName;T:WPA;P:TalkingAboutABC123;;';
-
-    // example URL for hyperlink
-    // var defaultString = 'https://google.com';
-
     function generateQR(){
-        $('#qrcodeCanvas').empty();
+
         var str = (document.querySelector('.buildMyInfo').value||'');
         if( '' == str.trim() ){
             str = defaultString;
         }
-        $('#qrcodeCanvas').qrcode({
-            render: "canvas",
-            text: str
-        });
+        qrcode.clear();
+        qrcode.makeCode(str);
     }
 
     generateQR();

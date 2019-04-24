@@ -11,6 +11,11 @@
             height: auto;
             font-size: 2em;
         }
+        #qrcodeCanvas {
+            width: 256px;
+            height: 256px;
+            margin-top:15px;
+        }
     </style>
 </head>
 <body>
@@ -25,17 +30,15 @@
     <p>
         <h3>Some things to try out.</h3>
         <ul>
-            <li>(default) <a href="https://github.com/edm00se/demos/blob/master/qr-builder/app.js#L5-L12">Homer J. Simpson's contact info (vcard format)</a></li>
-            <li>https://wikipedia.org</li>
-            <li>tel:+1234567890</li>
-            <li>smsto:+1234567890:hello there!</li>
-            <li>WIFI:T:WPA;S:somenetworkname;P:myamazingpassword;;</li>
+            <li>(<a href="https://github.com/edm00se/demos/blob/master/qr-builder/app.js#L5-L12">default</a>) Homer J. Simpson's contact info (vcard format)</li>
+            <li>(url) <code>https://wikipedia.org</code></li>
+            <li>(phone call) <code>tel:+1234567890</code></li>
+            <li>(text message) <code>smsto:+1234567890:hello there!</code></li>
+            <li>(wifi network info) <code>WIFI:T:WPA;S:somenetworkname;P:myamazingpassword;;</code></li>
         </ul>
     </p>
     
-    <script src="jquery.js"></script>
     <script src="qrcode.js"></script>
-    <script src="jquery.qrcode.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
