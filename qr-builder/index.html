@@ -17,6 +17,9 @@
             height: 256px;
             margin-top:15px;
         }
+        .note {
+            color: gray;
+        }
     </style>
 </head>
 <body>
@@ -26,6 +29,9 @@
         <input class="buildMyInfo" type="text" placeholder="enter your information to convert">
     </p>
     <div id="qrcodeCanvas"></div>
+    <p class="note">
+        You can hover the image to view the computed text from the "title" property.
+    </p>
 
     <br />
     <p>
@@ -37,6 +43,12 @@
             <li>(text message) <code>smsto:+1234567890:hello there!</code></li>
             <li>(wifi network info) <code>WIFI:T:WPA;S:somenetworkname;P:myamazingpassword;;</code></li>
         </ul>
+
+        <h3>Alternatively...</h3>
+        <p>
+            You could pass a value to this page as the query parameter 'value'. For example:<br />
+            <a href="https://edm00se.codes/demos/qr-builder/?value=Hello%20World!">https://edm00se.codes/demos/qr-builder/?value=Hello World!</a>
+        </p>
     </p>
     
     <script src="qrcode.js"></script>
