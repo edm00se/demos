@@ -21,8 +21,13 @@
 
 
     function generateQR(val){
-
-        var str = val||(document.querySelector('.buildMyInfo').value||'');
+        var myInput = document.querySelector('.buildMyInfo');
+        var str;
+        if(val){
+            str = val;
+        } else {
+            str = (myInput.value||'');
+        }
         if( '' == str.trim() ){
             str = defaultString;
         }
@@ -30,6 +35,7 @@
         qrcode.makeCode(str);
         var img = document.querySelector('img');
         img.title = str;
+        myInput.value = str;
 
     }
 
