@@ -4,11 +4,11 @@ What's a mouse trap? Something which puts out bait, like cheese, and then snaps 
 
 What's this project? Nothing more than a simple attempt at playing with the content preview `meta` tags.
 
-## Why?
+## Why
 
 Content previews are shown on many devices now, especially mobile. This is little more than a mini experiment, playing with the content headers to show alternative content to the actual page content.
 
-## How?
+## How
 
 This demonstration makes use of the [basic metadata for The Open Graph protocol](http://ogp.me/#metadata).
 
@@ -31,9 +31,16 @@ Ideally you should also include one with the canonical URL as `og:url`.
 <meta property="og:url" content="primary_url" />
 ```
 
-## Want More?
+## Preview
 
-[ogp.me](http://ogp.me/)
+Here's a preview of how the meta tags description of the content will look, as rendered via Twitter, preview curtesy of [metatags.io](https://metatags.io/).
+
+![preview of meta content](./img/metaPreview.jpg)
+
+## More
+
+- [ogp.me](http://ogp.me/)
+- [metatags.io](https://metatags.io/)
 
 ## License
 
