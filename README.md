@@ -1,5 +1,5 @@
 # [demos](https://edm00se.codes/demos/)
-A repository of one-off demos.
+A [repository of one-off demos](https://github.com/edm00se/demos/).
 
 ## Contents
 
